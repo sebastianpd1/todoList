@@ -11,7 +11,7 @@ export default class Todo extends React.Component {
 				<div className="col-4 offset-4 bg-dark p-0 pl-3">
 					<div className="row">
 						<div className="col-1">
-							<p>{this.props.id}</p>
+							<p>{String(this.props.id)}</p>
 						</div>
 						<div className="col-7 text-center">
 							<p>{this.props.name}</p>
@@ -33,6 +33,6 @@ export default class Todo extends React.Component {
 }
 Todo.propTypes = {
 	name: PropTypes.string,
-	id: PropTypes.string,
+	id: PropTypes.bool,
 	delete: PropTypes.func
 };
